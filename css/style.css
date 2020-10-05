@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 1.8rem;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.main-inner-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "main-head main-head main-head main-head main-head main-head" 
+        "mbody mbody mbody mbody pic pic"
+        ". . . . . ."
+        "logo1 logo2 logo3 logo4 logo5 logo6";
+}
+
+.main-h {
+    grid-area: main-head;
+}
+
+.mbody {
+    grid-area: mbody;
+}
+
+.pic {
+    grid-area: pic;
+}
+
+.clogo1 {
+    grid-area: logo1;
+}
+
+.clogo2 {
+    grid-area: logo2;
+}
+
+.clogo3 {
+    grid-area: logo3;
+}
+
+.clogo4 {
+    grid-area: logo4;
+}
+
+.clogo5 {
+    grid-area: logo5;
+}
+
+.clogo6 {
+    grid-area: logo6;
+}
+.regular-block {
+    padding: 1rem;
+    margin:1rem;
+}
+
+header, footer {
+    grid-column: 1 / 9;
+    background-color: black;
+    color: wheat;
+    padding: 1.5rem;
+}
+
+main {
+    grid-column: 2 / 7;
+}
+
+aside {
+    grid-column: 7 / 9;
+}
+
+.responsive-img {
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width:992px) {
+    main {
+        grid-column: 1 / 9;
+    }
+
+    aside {
+        grid-column: 1 / 9;
+    }
+}
