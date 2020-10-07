@@ -2,6 +2,7 @@ body {
     margin: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     line-height: 1.8rem;
+    color: gray;
 }
 
 .container {
@@ -14,8 +15,9 @@ body {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
     grid-template-rows: auto;
     grid-template-areas:
-        "main-head main-head main-head main-head main-head main-head" 
-        "mbody mbody mbody mbody pic pic"
+        "main-head main-head main-head main-head main-head main-head"
+        "pic pic pic pic pic pic"
+        "mbody mbody mbody mbody mbody mbody"
         ". . . . . ."
         "logo1 logo2 logo3 logo4 logo5 logo6";
 }
@@ -60,11 +62,31 @@ body {
     margin:1rem;
 }
 
-header, footer {
+header {
+    grid-column: 1 / 9;
+    background-color: transparent;
+    color: darkslategrey;
+    padding: 1.5rem;
+    line-height: 3.5rem;
+}
+
+header nav, li {
+    display: inline-block;
+    text-decoration: none;
+}
+
+footer {
     grid-column: 1 / 9;
     background-color: black;
     color: wheat;
     padding: 1.5rem;
+}
+
+.banner {
+    grid-column: 1 / 9;
+    height: 100vh;
+    background-image: url("https://picsum.photos/1600/980");
+    background-size: cover;
 }
 
 main {
