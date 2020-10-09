@@ -22,41 +22,24 @@ body {
         "logo1 logo2 logo3 logo4 logo5 logo6";
 }
 
-.main-h {
-    grid-area: main-head;
-}
+.main-h {grid-area: main-head;}
 
-.mbody {
-    grid-area: mbody;
-}
+.mbody {grid-area: mbody;}
 
-.pic {
-    grid-area: pic;
-}
+.pic {grid-area: pic;}
 
-.clogo1 {
-    grid-area: logo1;
-}
+.clogo1 {grid-area: logo1;}
 
-.clogo2 {
-    grid-area: logo2;
-}
+.clogo2 {grid-area: logo2;}
 
-.clogo3 {
-    grid-area: logo3;
-}
+.clogo3 {grid-area: logo3;}
 
-.clogo4 {
-    grid-area: logo4;
-}
+.clogo4 {grid-area: logo4;}
 
-.clogo5 {
-    grid-area: logo5;
-}
+.clogo5 {grid-area: logo5;}
 
-.clogo6 {
-    grid-area: logo6;
-}
+.clogo6 {grid-area: logo6;}
+
 .regular-block {
     padding: 1rem;
     margin:1rem;
@@ -64,7 +47,7 @@ body {
 
 header {
     grid-column: 1 / 9;
-    background-color: rgba(69, 173, 168, 0.8);
+    background-color: rgba(89, 79, 79, 0.3);
     color: whitesmoke;
     padding: 0 1.5rem;
     line-height: 3.5rem;
@@ -85,17 +68,13 @@ footer {
 .banner {
     grid-column: 1 / 9;
     height: 100vh;
-    background-image: url("https://picsum.photos/1600/980");
+    background-image: url("../img/luke-chesser-unsplash.jpg");
     background-size: cover;
 }
 
-main {
-    grid-column: 2 / 7;
-}
+main {grid-column: 2 / 7;}
 
-aside {
-    grid-column: 7 / 9;
-}
+aside {grid-column: 7 / 9;}
 
 .responsive-img {
     width: 100%;
@@ -109,27 +88,33 @@ aside {
     grid-template-areas: "logo navigation";
 }
 
-.logo {
-    grid-area: logo;
-}
+.logo {grid-area: logo;}
 
 nav {
     grid-area: navigation;
+    display: flex;
+    align-items: center;
+    padding: 0;
 }
 
 nav ul {
+    list-style-type: none;
     margin: 0;
+    padding: 0;    
 }
 
 nav ul li {
     height: 100%;
+    display: inline-block;
 }
 
-nav ul a {
-    vertical-align: middle;
+nav ul li a {
+    margin: auto 1rem;
 }
 
-
+.menu-toggle {
+    display: none;
+}
 
 @media screen and (max-width:992px) {
     main {
@@ -139,4 +124,15 @@ nav ul a {
     aside {
         grid-column: 1 / 9;
     }
+}
+
+@media screen and (max-width:420px) {
+    .navigator{
+        grid-template-columns: 85% 15%;
+        grid-template-areas: "logo navigation";
+    }
+
+    nav ul {display: none;}
+
+    .menu-toggle {display: inline;}
 }
